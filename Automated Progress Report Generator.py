@@ -45,7 +45,8 @@ print("File Path = " + File_Path)
 phase +=1 ##Phase 2##
 cycle(phase) 
 
-webbrowser.open('https://idesk.aramark.net/Login')
+webbrowser.open("https://idesk.aramark.net/Login")
+print("URL Command Sent for iDESK.Aramark.com")
 
 phase +=1 ##Phase 3##
 cycle(phase)
