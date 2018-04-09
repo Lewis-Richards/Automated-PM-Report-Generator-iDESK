@@ -7,7 +7,7 @@
 
 
 
-import pyautogui, sys, time, datetime, pyperclip
+import pyautogui, sys, time, datetime, pyperclip, webbrowser
 
 
 phase = 0
@@ -45,19 +45,7 @@ print("File Path = " + File_Path)
 phase +=1 ##Phase 2##
 cycle(phase) 
 
-Idesk_Shortcut = pyautogui.locateOnScreen("Idesk_Shortcut.png", grayscale=True)
-
-while Idesk_Shortcut == None:
-        Idesk_Shortcut = pyautogui.locateOnScreen("Idesk_Shortcut.png", grayscale=True)
-        print("Still searching for Idesk_Shortcut...")
-    
-#When program finds Idesk Shortcut image, print the location
-print("Idesk Shortcut is located at {0} ".format(Idesk_Shortcut))
-Idesk_Shortcut_X, Idesk_Shortcut_Y = pyautogui.center(Idesk_Shortcut)
-print("Center point of Idesk_Shortcut is located at ({0}, {1})".format(Idesk_Shortcut_X, Idesk_Shortcut_Y))
-pyautogui.moveTo(Idesk_Shortcut_X, Idesk_Shortcut_Y)
-pyautogui.click(clicks=2) # click Idesk Shortcut
-
+webbrowser.open('https://idesk.aramark.net/Login')
 
 phase +=1 ##Phase 3##
 cycle(phase)
