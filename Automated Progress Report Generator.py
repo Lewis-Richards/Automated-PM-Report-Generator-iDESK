@@ -1,7 +1,7 @@
 #! python3
 
 ## This program uses gui automation to access an internal medical equipment management system on my desktop 
-## in order to generate a scheduled maintenance report that I use to track the perfomance of my department.
+## in order to generate a scheduled maintenance report that I use to track the performance of my department.
 ## Out of the box, the report is not very useful, so I have this program initiate some excel
 ## macros to clean up the report and save it to a directory on my PC.
 
