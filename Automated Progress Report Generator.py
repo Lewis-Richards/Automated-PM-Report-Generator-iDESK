@@ -16,22 +16,22 @@ def cycle(phase):  ## Provides visual feedback of distinct program phases in con
     phase = int(phase)
     if phase == 0:
         Start = "START"
-        print(Start.center(66, "-"))
+        print(Start.center(100, "-"))
     elif 0 < phase < 14:
         Sequence = "PHASE_" + str(phase)
-        print(Sequence.center(66, "-"))
+        print(Sequence.center(100, "-"))
     else:
         Complete = "COMPLETE"
-        print(Complete.center(66, "-"))
+        print(Complete.center(100, "-"))
 
-cycle(phase) ##Start##
+cycle(phase) ##Start
 
 now = datetime.datetime.now()
 print(str(now))
 Start_Time = time.time()
 print(Start_Time)
 
-phase +=1 ##Phase 1##
+phase +=1 ##Phase 1
 cycle(phase) 
 
 
@@ -42,13 +42,13 @@ print("File Name = " + File_Name)
 File_Path = r"C:\Users\richarl2\Documents\My Docs\CaroMont Health\Operations\Incomplete PMs\2018"
 print("File Path = " + File_Path)
 
-phase +=1 ##Phase 2##
+phase +=1 ##Phase 2
 cycle(phase) 
 
 webbrowser.open("https://idesk.aramark.net/Login")
 print("URL Command Sent for iDESK.Aramark.com")
 
-phase +=1 ##Phase 3##
+phase +=1 ##Phase 3
 cycle(phase)
 
 time.sleep(4.0)
@@ -71,7 +71,7 @@ while Idesk_Minimize == None or Idesk_Minimize == None:
             break               
         
         
-phase +=1 ##Phase 4##
+phase +=1 ##Phase 4
 cycle(phase)
 
 Idesk_Login = 'username' # Will need to be updated prior to implementation
@@ -101,7 +101,7 @@ print("Scheduled_Work_Orders_Button is located at {0}".format(Scheduled_Work_Ord
 Scheduled_Work_Orders_Button_X, Scheduled_Work_Orders_Button_Y = pyautogui.center(Scheduled_Work_Orders_Button)
 print("Center point of Scheduled_Work_Orders_Button is located at ({0}, {1})".format(Scheduled_Work_Orders_Button_X, Scheduled_Work_Orders_Button_Y))
 
-phase +=1 ##Phase 5##
+phase +=1 ##Phase 5
 cycle(phase)
 
 pyautogui.moveTo(Scheduled_Work_Orders_Button_X, Scheduled_Work_Orders_Button_Y)
@@ -124,7 +124,7 @@ pyautogui.click(clicks=1)  # click the Export Button
 print("Export_Button is located at {}".format(Export_Button))
 time.sleep(3.0) 
 
-phase +=1  ##Phase 6##
+phase +=1  ##Phase 6
 cycle(phase) 
 
 Open_Button = pyautogui.locateOnScreen("Open_Button.png", grayscale=True)
@@ -180,7 +180,7 @@ if Maximize_Excel_Button != None:
     pyautogui.click(clicks=1) # click Maximize_Excel_Button
 
                          
-phase +=1  ##Phase 7##
+phase +=1  ##Phase 7
 cycle(phase)
 
 Cell_A1 = (55,317) ## Finds cell A1 of excel file
@@ -206,7 +206,7 @@ File_Tab_X, File_Tab_Y = pyautogui.center(File_Tab)
 print("Center point of File_Tab is located at ({0}, {1})".format(File_Tab_X, File_Tab_Y))
 
 
-phase +=1 ##Phase 8##
+phase +=1 ##Phase 8
 cycle(phase) 
 
 pyautogui.moveTo(File_Tab_X, File_Tab_Y)
@@ -226,7 +226,7 @@ Save_As_Button_X, Save_As_Button_Y = pyautogui.center(Save_As_Button)
 print("Center point of Save_As_Button is located at ({0}, {1})".format(Save_As_Button_X, Save_As_Button_Y))
 phase +=1
 
-cycle(phase) ##Phase 9##
+cycle(phase) ##Phase 9
 pyautogui.moveTo(Save_As_Button_X, Save_As_Button_Y)
 pyautogui.click(clicks=1) # click File_Tab
 time.sleep(0.5)
@@ -245,7 +245,7 @@ Computer_Button_X, Computer_Button_Y = pyautogui.center(Computer_Button)
 print("Center point of Computer_Button is located at ({0}, {1})".format(Computer_Button_X, Computer_Button_Y))
 
 
-phase +=1  ##Phase 10##
+phase +=1  ##Phase 10
 cycle(phase)
 
 pyautogui.moveTo(Computer_Button_X, Computer_Button_Y)
@@ -273,7 +273,7 @@ Save_As_Type_Highlighted_X, Save_As_Type_Highlighted_Y = pyautogui.center(Save_A
 print("Center point of Save_As_Type_Highlighted is located at ({0}, {1})".format(Save_As_Type_Highlighted_X, Save_As_Type_Highlighted_Y))
 
 
-phase +=1  ##Phase 11##
+phase +=1  ##Phase 11
 cycle(phase)
 
 pyautogui.moveTo(Save_As_Type_Highlighted_X, Save_As_Type_Highlighted_Y)
@@ -299,7 +299,7 @@ Path_Bar_X, Path_Bar_Y = pyautogui.center(Path_Bar)
 print("Center point of Path_Bar is located at ({0}, {1})".format(Path_Bar_X, Path_Bar_Y))
 
 
-phase +=1 ##Phase 12##
+phase +=1 ##Phase 12
 cycle(phase) 
 
 pyautogui.moveTo(Path_Bar_X + 680, Path_Bar_Y)
@@ -334,7 +334,7 @@ elif Yes_Button != None:
 
 
 
-phase +=1  ##Phase 13##
+phase +=1  ##Phase 13
 cycle(phase)
 
 
@@ -350,6 +350,6 @@ print(str(now))
 print("Program Run Time = %s seconds " % (time.time() - Start_Time))
 
 
-phase +=1  ##Complete##
+phase +=1  ##Complete
 cycle(phase)
 exit()
